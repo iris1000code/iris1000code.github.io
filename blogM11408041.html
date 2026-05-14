@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《戀夏500日》：一場關於愛情的災難與覺醒</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        summer: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dream: {
+                            purple: '#a78bfa',
+                            pink: '#f472b6',
+                            dark: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #7dd3fc 0%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            filter: brightness(0.8) contrast(1.1);
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+
+        .section-hover:hover {
+            transform: translateY(-5px);
+            border-color: rgba(125, 211, 252, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation Placeholder -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-slate-900/50 border-b border-white/5">
+        <div class="font-display font-extrabold text-2xl tracking-tighter text-white">
+            M11408041 <span class="text-summer-400">.</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-display text-sm uppercase tracking-widest text-slate-400">
+            <span class="text-summer-300">Analysis</span>
+            <span class="hover:text-white cursor-pointer transition-colors">Visuals</span>
+            <span class="hover:text-white cursor-pointer transition-colors">Reflection</span>
+        </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <header class="relative w-full overflow-hidden pt-16">
+        <div class="banner-container relative">
+            <img src='https://opal.google/board/blobs/387ba79a-2025-4190-8aa0-c01678535116' alt='Dreamcore Illustration of 500 Days of Summer' class="animate-pulse-slow" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-6 -mt-32 relative z-10">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-summer-500/20 border border-summer-500/30 text-summer-300 text-xs font-bold tracking-widest uppercase animate-fade-in-up">
+                Film Analysis & Perspective
+            </div>
+            <h1 class="font-display text-4xl md:text-7xl font-extrabold leading-tight mb-8 animate-fade-in-up" style="animation-delay: 0.1s;">
+                <span class="block">《戀夏500日》：</span>
+                <span class="text-gradient">這不是一個愛情故事，</span>
+                <span class="block text-2xl md:text-4xl mt-2 font-light text-slate-300 italic">而是一場關於愛情的災難與覺醒</span>
+            </h1>
+            
+            <div class="flex items-center space-x-4 mb-12 animate-fade-in-up" style="animation-delay: 0.2s;">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-summer-400 to-dream-purple flex items-center justify-center font-bold text-white shadow-lg">M</div>
+                <div>
+                    <p class="text-white font-medium">M11408041</p>
+                    <p class="text-slate-500 text-sm italic">2024.05.20 · 12 min read</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 pb-24">
+        <!-- Intro Text -->
+        <div class="glass-card p-8 md:p-12 mb-16 animate-fade-in-up" style="animation-delay: 0.3s;">
+            <p class="text-xl md:text-2xl leading-relaxed font-light text-slate-200 first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left first-letter:text-summer-400">
+                有些電影，初看時是一場感性的重感冒，過幾年再看，卻成了一本理性的教科書。2009 年上映的《戀夏 500 日》（(500) Days of Summer）就是這樣的存在。
+            </p>
+            <p class="text-lg leading-relaxed text-slate-400 mt-6">
+                當旁白在那冷靜得近乎殘酷的開場白中說出：「這不是一個愛情故事」時，多數人其實並未聽進去。我們習慣了浪漫喜劇的公式，卻忘了這部片其實是一場精準的「情感解剖」。作為一個習慣在字裡行間尋找邏輯的知識份子，我想邀請大家撇開那些過度飽和的色彩，重新從幾個多維的角度，來聊聊這場著名的心碎現場。
+            </p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="bento-grid">
+            
+            <!-- Point 1 -->
+            <section class="col-span-12 md:col-span-7 glass-card p-8 section-hover">
+                <div class="flex items-center mb-6">
+                    <span class="font-display text-4xl font-black text-summer-500/40 mr-4">01</span>
+                    <h2 class="text-2xl font-bold text-white">到底是在演哪齣？——非線性敘事下的情緒雲霄飛車</h2>
+                </div>
+                <p class="text-slate-400 leading-relaxed">
+                    誰說故事一定要從 Day 1 講到 Day 500？現實中的記憶從來不是直線的。當我們在深夜回憶前任時，往往是 Day 488 的爭吵緊接著 Day 31 的初吻。
+                </p>
+                <div class="mt-6 p-4 rounded-xl bg-slate-800/50 border-l-4 border-summer-400 italic text-slate-300">
+                    "這套非線性敘事（Non-linear narrative）完美模擬了人類對「遺失之愛」的心理狀態：混亂、反覆且充滿過度解讀。"
+                </div>
+            </section>
+
+            <!-- Point 2 -->
+            <section class="col-span-12 md:col-span-5 glass-card p-8 section-hover flex flex-col justify-center bg-gradient-to-br from-summer-900/20 to-transparent">
+                <div class="flex items-center mb-6">
+                    <span class="font-display text-4xl font-black text-dream-pink/40 mr-4">02</span>
+                    <h2 class="text-2xl font-bold text-white">文青聖經與真實血淚</h2>
+                </div>
+                <p class="text-slate-400 leading-relaxed">
+                    Zooey Deschanel 的復古氣質搭配 The Smiths 的憂鬱旋律，加上黑膠、老建築與穿搭，捕捉了那個時代年輕人對於「獨特性」的追求。這不僅是視覺包裝，更是一種文化符號的堆疊。
+                </p>
+            </section>
+
+            <!-- Big Quote -->
+            <div class="col-span-12 py-12 flex flex-col items-center text-center">
+                <div class="w-20 h-1 bg-summer-500 mb-8"></div>
+                <blockquote class="font-display text-3xl md:text-5xl font-light italic text-white max-w-3xl leading-snug">
+                    "湯姆愛上的不是真實的夏天，而是他自己腦補出來、能「拯救」他平庸生活的女神。"
+                </blockquote>
+                <div class="w-20 h-1 bg-summer-500 mt-8"></div>
+            </div>
+
+            <!-- Point 3 -->
+            <section class="col-span-12 md:col-span-6 glass-card p-8 section-hover">
+                <div class="flex items-center mb-6">
+                    <span class="font-display text-4xl font-black text-summer-300/40 mr-4">03</span>
+                    <h2 class="text-2xl font-bold text-white">主流觀點的翻轉：你被「粉紅濾鏡」騙了嗎？</h2>
+                </div>
+                <p class="text-slate-400 leading-relaxed mb-4">
+                    湯姆是一個典型的「不可靠敘述者」（Unreliable Narrator）。我們看到的夏天，其實是開了「超強美顏濾鏡」後的幻影。
+                </p>
+                <p class="text-slate-400 leading-relaxed">
+                    湯姆只記住她甜美的微笑，卻選擇性地忽略了夏天從 Day 1 就明確告知的底線。這其實是一場<span class="text-white font-semibold">主觀意志對現實的強暴</span>。
+                </p>
+            </section>
+
+            <!-- Point 4 -->
+            <section class="col-span-12 md:col-span-6 glass-card p-8 section-hover border-r-4 border-r-dream-pink/20">
+                <div class="flex items-center mb-6">
+                    <span class="font-display text-4xl font-black text-dream-pink/40 mr-4">04</span>
+                    <h2 class="text-2xl font-bold text-white">誰才是這段關係裡的「反派」？</h2>
+                </div>
+                <p class="text-slate-400 leading-relaxed">
+                    「夏天是不是綠茶婊？」這反映了觀眾從「受害者心態」轉向「關係透明度」的認知進化。
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-full bg-slate-800 text-xs text-slate-300 border border-slate-700">Manic Pixie Dream Girl</span>
+                    <span class="px-3 py-1 rounded-full bg-slate-800 text-xs text-slate-300 border border-slate-700">客體化</span>
+                    <span class="px-3 py-1 rounded-full bg-slate-800 text-xs text-slate-300 border border-slate-700">解構</span>
+                </div>
+            </section>
+
+            <!-- Point 5 -->
+            <section class="col-span-12 glass-card p-10 section-hover bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <span class="font-display text-4xl font-black text-summer-400/40 mr-4">05</span>
+                            <h2 class="text-3xl font-bold text-white font-display">永不過期的教科書</h2>
+                        </div>
+                        <p class="text-lg text-slate-300 leading-relaxed">
+                            它教給我們最重要的一課，不是如何追到女神，而是<span class="text-summer-400 font-bold">「情感邊界」與「健康溝通」</span>。它溫柔地提醒我們：就算對方跟你有同樣的音樂品味，也不代表她就是你的靈魂伴侶。
+                        </p>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-white/5">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="mt-1.5 h-2 w-2 rounded-full bg-summer-400 mr-3 shrink-0"></div>
+                                <span class="text-slate-400 text-sm">認清自我比尋找伴侶更重要</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="mt-1.5 h-2 w-2 rounded-full bg-summer-400 mr-3 shrink-0"></div>
+                                <span class="text-slate-400 text-sm">付出並不等於對方有義務回報結局</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="mt-1.5 h-2 w-2 rounded-full bg-summer-400 mr-3 shrink-0"></div>
+                                <span class="text-slate-400 text-sm">從「夏天」到「秋天」的必然成長</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Conclusion -->
+        <footer class="mt-24 pt-12 border-t border-white/10">
+            <div class="max-w-2xl mx-auto text-center">
+                <h3 class="text-3xl font-bold mb-8 text-white">結語</h3>
+                <div class="space-y-6 text-lg text-slate-300 leading-loose italic">
+                    <p>《戀夏 500 日》是一面鏡子。</p>
+                    <p>你以前看像湯姆，是因為你還在學習如何愛人；你現在看像夏天，是因為你正在學習如何守護自己。</p>
+                    <p class="text-2xl font-bold text-white not-italic mt-12 bg-gradient-to-r from-summer-500/20 to-dream-pink/20 py-4 px-6 rounded-2xl border border-white/10">
+                        祝我們都能在下一個秋天到來前，先找回那個不被濾鏡遮蔽的自己。
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scroll Indicator -->
+    <div class="fixed bottom-8 right-8 mix-blend-difference opacity-50">
+        <div class="h-12 w-0.5 bg-white animate-bounce mx-auto"></div>
+        <p class="text-[10px] uppercase tracking-[0.3em] font-display mt-2 vertical-rl">Scroll</p>
+    </div>
+
+    <script>
+        // Simple Intersection Observer for animation triggers
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-hover').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
